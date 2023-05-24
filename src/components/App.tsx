@@ -7,8 +7,8 @@ import Footer from './footer/Footer'
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Header />
+    <>
+      <Header backgroundColor='#f8e256' />
 
 
       {/* Complete the exercise here. */}
@@ -20,10 +20,10 @@ const App: React.FC = () => {
         <h1>Posts</h1>
         <PostList data={postsData} />
       </div>
-      
+
       <Footer />
       
-    </div>
+    </>
   );
 };
 
