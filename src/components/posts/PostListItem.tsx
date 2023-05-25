@@ -1,5 +1,5 @@
 import React from 'react';
-import './PostListStyle.module.css';
+import styles from './PostListItemStyle.module.css';
 import Image from '../image/Image';
 
 interface Post {
@@ -23,17 +23,24 @@ interface PostListItemProps {
 
 const PostListItem: React.FC<PostListItemProps> = ({ post }) => {
   return (
-    <div className='card'>
-      <h2>{post.title}</h2>
-      <p>{post.summary}</p>
-      <p>{post.publishDate}</p>
-      <p>Author: {post.author.name}</p>
-      <Image src={post.author.avatar} alt={'Author Avatar"'} maxWidth='70px' radius='50%' border='1px solid #c7c7c7' />
-      <ul>
+    <div className={`${styles.postItem}`}>
+      <h2 className={`${styles.truncate} ${styles.truncateLineTwo}`}>{post.title}</h2>
+      <p className={`${styles.truncate} ${styles.truncateLineTwo}`}>{post.summary}</p>
+      
+      <div className={`${styles.flex}`}>
+        <Image src={post.author.avatar} alt="Author Avatar" maxWidth="50px" radius="50%" border="1px solid #c7c7c7" />
+        <div className={styles.authorDetails}>
+          <p>Author: {post.author.name}</p>
+          {/* <p>{post.publishDate}</p> */}
+        </div>
+      </div>
+
+      {/* These are post categories (wasn't sure to show on the front end) */}
+      {/* <ul>
         {post.categories.map((category) => (
           <li key={category.id}>{category.name}</li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };

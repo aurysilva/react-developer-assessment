@@ -15,7 +15,6 @@ const App: FC = () => {
       <>
         <Header backgroundColor="#f8e256" />
 
-        {/* <div> */}
           <PageTile pageTile="Latest Posts" style={{ textAlign: 'center', textDecoration: 'underline' }} />
           <Routes>
             <Route path="/" element={<PostList data={postsData} />} />
@@ -24,7 +23,6 @@ const App: FC = () => {
               element={<PostDetails postsData={postsData} />} // Pass the postsData prop
             />
           </Routes>
-        {/* </div> */}
 
         <Footer />
       </>

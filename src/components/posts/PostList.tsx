@@ -50,7 +50,7 @@ const PostList: React.FC<PostListProps> = ({ data }) => {
 
       {visiblePosts < posts.length && (
         <div className={styles.loadMoreButton}>
-          <ButtonCustom customClass='bgYellow' text={'Load More'} onClick={handleLoadMore}/>
+          <ButtonCustom customClass={`${styles.bgYellow} ${styles.border}`} text={'Load More'} onClick={handleLoadMore}/>
         </div>
       )}
     </>

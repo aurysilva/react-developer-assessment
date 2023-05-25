@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useParams } from 'react-router-dom';
-import './PostDetailsStyle.module.css'
+import styles from './PostDetailsStyle.module.css'
 
 interface PostDetailsProps {
   postsData: PostsData;
@@ -30,14 +30,14 @@ const PostDetails: FC<PostDetailsProps> = ({ postsData }) => {
   const post = postsData.posts.find((post) => post.id === postId);
 
   if (!post) {
-    return <div>Post not found</div>;
+    return <div className={`${styles.container}`}> <h1>Post not found</h1> <p>Unfotunately there is nothing here</p> </div>;      
   }
 
   const { title, author } = post;
 
   return (
-    <div className='container'>
-      <h1>{title}</h1>
+    <div className={`${styles.container}`}>
+      <h2>{title}</h2>
       <p>Author: {author.name}</p>
     </div>
   );
