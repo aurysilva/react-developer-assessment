@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import { useParams } from 'react-router-dom';
-import styles from './PostDetailsStyle.module.css'
+import { Link, useParams } from 'react-router-dom';
+import styles from './PostDetailsStyle.module.css';
+import PageTile from '../../page-tile/PageTile';
 
 interface PostDetailsProps {
   postsData: PostsData;
@@ -30,16 +31,30 @@ const PostDetails: FC<PostDetailsProps> = ({ postsData }) => {
   const post = postsData.posts.find((post) => post.id === postId);
 
   if (!post) {
-    return <div className={`${styles.container}`}> <h1>Post not found</h1> <p>Unfotunately there is nothing here</p> </div>;      
+    return (
+      <div className={styles.container}>
+        <h1>Post not found</h1>
+        <p>Unfortunately, there is nothing here</p>
+        <Link to="/">Go back to home</Link>
+      </div>
+    );
   }
 
-  const { title, author } = post;
+  const { title, author, categories } = post;
 
   return (
-    <div className={`${styles.container}`}>
-      <h2>{title}</h2>
-      <p>Author: {author.name}</p>
-    </div>
+    <>
+      <PageTile
+        pageTile="Post Details"
+        pageSubTile={categories[0].name}
+        bgImage="https://www.aurysilva.co.uk/wp-content/uploads/2021/11/jess-bailey-q10VITrVYUM-unsplash-scaled.jpg"
+      />
+
+      <div className={styles.container}>
+        <h2>{title}</h2>
+        <p>Author: {author.name}</p>
+      </div>
+    </>
   );
 };
 

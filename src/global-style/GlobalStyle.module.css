@@ -1,3 +1,16 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -8,6 +21,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   margin: 0;
+  background-color: #ffffff;
 }
 
 code {
@@ -33,37 +47,19 @@ p {
   margin: 0 0 10px;
 }
 
-h2 {
-  font-size: 25px;
+h1 {
+  font-size: 30px;
+  line-height: 43px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
   font-weight: 600;
+  font-size: 25px;
   line-height: 33px;
   text-transform: capitalize;
 }
-
-
-/* Button Styles */
-
-button, .btn {
-  display: inline-block;
-  padding: 15px 30px;
-  cursor: pointer;
-  transition: .3s ease-in-out;
-  -webkit-transition: .3s ease-in-out;
-  -moz-transition: .3s ease-in-out;
-  -ms-transition: .3s ease-in-out;
-  -o-transition: .3s ease-in-out;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
-  /* border: 2px solid #000000; */
-}
-
-.btn:hover {
-  opacity: .9;
-}
-
 
 /* Backgrounds */
 

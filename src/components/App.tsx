@@ -1,28 +1,26 @@
 import React, { FC } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import postsData from '../mock/data.json';
-import PostList from './posts/PostList';
 import Header from './header/Header';
 import Footer from './footer/Footer';
-import PageTile from './page-tile/PageTile';
 import PostDetails from './pages/post-detail/PostDetails';
-// import styles from '../global-style/GlobalSyle.css';
+import '../global-style/GlobalStyle.module.css';
+import HomePage from './pages/homepage/HomePage';
+import AboutPage from './pages/about/About';
+import ContactPage from './pages/contact/Contact';
 
- 
 const App: FC = () => {
   return (
     <Router>
       <>
         <Header backgroundColor="#f8e256" />
 
-          <PageTile pageTile="Latest Posts" style={{ textAlign: 'center', textDecoration: 'underline' }} />
-          <Routes>
-            <Route path="/" element={<PostList data={postsData} />} />
-            <Route
-              path="/posts/:postId"
-              element={<PostDetails postsData={postsData} />} // Pass the postsData prop
-            />
-          </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/posts/:postId" element={<PostDetails postsData={postsData} />} />
+        </Routes>
 
         <Footer />
       </>
