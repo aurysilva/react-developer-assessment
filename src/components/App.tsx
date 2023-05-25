@@ -6,14 +6,16 @@ import Header from './header/Header';
 import Footer from './footer/Footer';
 import PageTile from './page-tile/PageTile';
 import PostDetails from './pages/post-detail/PostDetails';
+// import styles from '../global-style/GlobalSyle.css';
 
+ 
 const App: FC = () => {
   return (
     <Router>
       <>
         <Header backgroundColor="#f8e256" />
 
-        <div>
+        {/* <div> */}
           <PageTile pageTile="Latest Posts" style={{ textAlign: 'center', textDecoration: 'underline' }} />
           <Routes>
             <Route path="/" element={<PostList data={postsData} />} />
@@ -22,7 +24,7 @@ const App: FC = () => {
               element={<PostDetails postsData={postsData} />} // Pass the postsData prop
             />
           </Routes>
-        </div>
+        {/* </div> */}
 
         <Footer />
       </>

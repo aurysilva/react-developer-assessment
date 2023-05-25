@@ -1,8 +1,10 @@
 
-.post-wrapper {
+.postWrapper {
     display: grid;
     gap: 20px;
     padding: 30px;
+    margin: 0 auto;
+    max-width: 1400px;
   
     /* Desktop: 4 columns per row */
     grid-template-columns: repeat(4, 1fr);
@@ -24,6 +26,15 @@
   }
 
 
+.containerFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: auto;
+    max-width: 1400px;
+}
+
 /* Animations */
 .post-item-enter {
     opacity: 0;
@@ -43,8 +54,7 @@
   transition: opacity 500ms;
 }
 
-.load-more-button {
+.loadMoreButton {
     padding: 30px 0 70px;
     text-align: center;
 }
-  

@@ -1,18 +1,14 @@
-// import React, { CSSProperties } from 'react';
-import './ButtonCustomStyle.module.css';
+import React, { MouseEventHandler } from 'react';
 
 interface ButtonCustomProps {
   text: string;
-  // onClick: MouseEventHandler<HTMLButtonElement>;
-  // style?: CSSProperties;
-  className?: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  customClass?: string;
 }
 
-const ButtonCustom: React.FC<ButtonCustomProps> = ({ text, className }) => {
+const ButtonCustom: React.FC<ButtonCustomProps> = ({ text, onClick, customClass }) => {
   return (
-    <button className={className}>
-      {text}
-    </button>
+    <button onClick={onClick} className={`${customClass}`}>{text}</button>
   );
 };
 

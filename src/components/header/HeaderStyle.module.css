@@ -1,36 +1,21 @@
 header {
-    padding: 30px 0;
+    padding: 20px 30px;
 }
 
-.container {
+.logo {
+    width: 100%;
+    max-width: 120px;
+}
+
+.containerFlex {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-}
-
-nav li {
-    display: inline-block;
-    text-align: center;
-    padding: 10px 20px;
-}
-
-nav li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-    -webkit-transition: .3s ease-in-out;
-    -moz-transition: .3s ease-in-out;
-    -ms-transition: .3s ease-in-out;
-    -o-transition: .3s ease-in-out;
-}
-
-nav li  a:hover {
-    color: #817a51;
+.bgDark {
+    background-color: #1f1f1f;
+    color: #ffffff;
 }
