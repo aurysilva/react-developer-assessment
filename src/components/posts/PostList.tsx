@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import PostListItem from './PostListItem';
 import './PostListStyle.css';
 
@@ -27,31 +28,30 @@ interface PostListProps {
 
 const PostList: React.FC<PostListProps> = ({ data }) => {
   const { posts } = data;
-  const [visiblePosts, setVisiblePosts] = useState(posts.slice(0, 16));
-  const [loadMoreVisible, setLoadMoreVisible] = useState(true);
+  const [visiblePosts, setVisiblePosts] = useState(12);
 
-  const loadMorePosts = () => {
-    const currentLength = visiblePosts.length;
-    const nextPosts = posts.slice(currentLength, currentLength + 8);
-
-    if (nextPosts.length === 0) {
-      setLoadMoreVisible(false);
-    }
-
-    setVisiblePosts([...visiblePosts, ...nextPosts]);
+  const handleLoadMore = () => {
+    setVisiblePosts((prevVisiblePosts) => prevVisiblePosts + 4);
   };
 
   return (
-    <div className='post-wrapper'>
-      {visiblePosts.map((post) => (
-        <PostListItem key={post.id} post={post} />
-      ))}
-      {loadMoreVisible && (
-        <button className="load-more-button" onClick={loadMorePosts}>
-          Load More
-        </button>
+    <>
+        <TransitionGroup class="post-wrapper">
+          {posts.slice(0, visiblePosts).map((post, index) => (
+            <CSSTransition key={post.id} timeout={500} classNames='post-item'>
+              <PostListItem post={post} />
+            </CSSTransition>
+          ))}
+        </TransitionGroup>
+
+      {visiblePosts < posts.length && (
+        <div className='load-more-button'>
+          <button className='btn bg-yellow' onClick={handleLoadMore}>
+            Load More
+          </button>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

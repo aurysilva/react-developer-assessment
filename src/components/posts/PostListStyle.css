@@ -1,12 +1,4 @@
 
-
-/* 
-.post-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
-
 .post-wrapper {
     display: grid;
     gap: 20px;
@@ -30,4 +22,29 @@
       grid-template-columns: 1fr;
     }
   }
+
+
+/* Animations */
+.post-item-enter {
+    opacity: 0;
+}
+
+.post-item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.post-item-exit {
+  opacity: 1;
+}
+
+.post-item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+  
+.load-more-button {
+    padding: 30px 0 70px;
+    text-align: center;
+}
   
