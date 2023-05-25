@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import './PageTileStyle.css';
+import './PageTileStyle.module.css';
 
 interface PageTileProps {
   pageTile: string;

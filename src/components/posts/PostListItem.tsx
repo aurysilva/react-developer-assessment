@@ -1,5 +1,5 @@
 import React from 'react';
-import './PostListStyle.css';
+import './PostListStyle.module.css';
 
 interface Post {
   id: string;

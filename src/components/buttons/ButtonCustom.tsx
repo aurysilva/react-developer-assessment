@@ -1,5 +1,5 @@
 // import React, { CSSProperties } from 'react';
-import './ButtonCustomStyle.css';
+import './ButtonCustomStyle.module.css';
 
 interface ButtonCustomProps {
   text: string;

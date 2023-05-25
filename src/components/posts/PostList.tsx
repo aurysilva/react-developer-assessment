@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { Link } from 'react-router-dom';
+import './PostListStyle.module.css';
 import PostListItem from './PostListItem';
-import './PostListStyle.css';
 
 interface PostsData {
   posts: Post[];
@@ -36,17 +37,19 @@ const PostList: React.FC<PostListProps> = ({ data }) => {
 
   return (
     <>
-        <TransitionGroup class="post-wrapper">
-          {posts.slice(0, visiblePosts).map((post, index) => (
-            <CSSTransition key={post.id} timeout={500} classNames='post-item'>
+      <TransitionGroup className="post-wrapper">
+        {posts.slice(0, visiblePosts).map((post, index) => (
+          <CSSTransition key={post.id} timeout={500} classNames="post-item">
+            <Link to={`/posts/${post.id}`}>
               <PostListItem post={post} />
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
+            </Link>
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
 
       {visiblePosts < posts.length && (
-        <div className='load-more-button'>
-          <button className='btn bg-yellow' onClick={handleLoadMore}>
+        <div className="load-more-button">
+          <button className="btn bg-yellow" onClick={handleLoadMore}>
             Load More
           </button>
         </div>

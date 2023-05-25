@@ -1,4 +1,4 @@
-import './FooterStyle.css';
+import './FooterStyle.module.css';
 import Image from '../image/Image';
 
 const Footer = () => {
