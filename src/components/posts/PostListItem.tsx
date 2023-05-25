@@ -1,4 +1,5 @@
 import React from 'react';
+import './PostListStyle.css';
 
 interface Post {
   id: string;
@@ -21,7 +22,7 @@ interface PostListItemProps {
 
 const PostListItem: React.FC<PostListItemProps> = ({ post }) => {
   return (
-    <div>
+    <div className='card'>
       <h2>{post.title}</h2>
       <p>{post.summary}</p>
       <p>{post.publishDate}</p>

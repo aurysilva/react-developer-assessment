@@ -1,0 +1,33 @@
+
+
+/* 
+.post-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.post-wrapper {
+    display: grid;
+    gap: 20px;
+    padding: 30px;
+  
+    /* Desktop: 4 columns per row */
+    grid-template-columns: repeat(4, 1fr);
+  
+    /* Medium devices: 3 columns per row */
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    /* Tablet: 2 columns per row */
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    /* Mobile: 1 column per row */
+    @media (max-width: 580px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
