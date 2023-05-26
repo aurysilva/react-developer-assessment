@@ -35,7 +35,7 @@ const ContactPage: React.FC = () => {
         </form>
 
         <div className={styles.mapContainer}>
-          {/* Add your map component or embed code here */}
+          {/* Add map component or embed code here */}
           <p>Map goes here</p>
         </div>
 

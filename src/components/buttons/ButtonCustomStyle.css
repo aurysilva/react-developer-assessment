@@ -1,6 +1,6 @@
 
 /* Button Styles */
-button, .btn {
+button, .btn, a {
     display: inline-block;
     padding: 15px 30px;
     cursor: pointer;
@@ -14,7 +14,6 @@ button, .btn {
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
-    /* border: 2px solid #000000; */
   }
   
   .btn:hover {

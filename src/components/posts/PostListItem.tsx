@@ -18,7 +18,7 @@ interface Post {
 }
 
 interface PostListItemProps {
-  post: Post;
+  post: Post; // Props interface for the PostListItem component
 }
 
 const PostListItem: React.FC<PostListItemProps> = ({ post }) => {
@@ -30,8 +30,8 @@ const PostListItem: React.FC<PostListItemProps> = ({ post }) => {
       <div className={`${styles.flex}`}>
         <Image src={post.author.avatar} alt="Author Avatar" maxWidth="50px" radius="50%" border="1px solid #c7c7c7" />
         <div className={styles.authorDetails}>
-          <p>Author: {post.author.name}</p>
-          {/* <p>{post.publishDate}</p> */}
+          <p>Author: {post.author.name}</p> {/* Render the name of the author */}
+          {/* <p>{post.publishDate}</p> */} {/* Commented out the publication date */}
         </div>
       </div>
 

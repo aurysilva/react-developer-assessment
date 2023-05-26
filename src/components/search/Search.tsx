@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import styles from './SearchStyle.module.css';
 
 interface SearchComponentProps {
-  onSearch: (query: string) => void;
+  onSearch: (query: string) => void; // Function to handle search query
 }
 
 const SearchComponent: React.FC<SearchComponentProps> = ({ onSearch }) => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState(''); // State to store the search query
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const query = event.target.value;
-    setSearchQuery(query);
-    onSearch(query);
+    const query = event.target.value; // Get the value from the input field
+    setSearchQuery(query); // Update the search query state
+    onSearch(query); // Call the onSearch function with the query
   };
 
   return (
@@ -21,7 +21,7 @@ const SearchComponent: React.FC<SearchComponentProps> = ({ onSearch }) => {
         type="text"
         value={searchQuery}
         onChange={handleInputChange}
-        placeholder="Search for articles..."
+        placeholder="Search for articles..." // Placeholder text for the input field
       />
     </div>
   );

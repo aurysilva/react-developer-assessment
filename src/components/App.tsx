@@ -12,18 +12,16 @@ import ContactPage from './pages/contact/Contact';
 const App: FC = () => {
   return (
     <Router>
-      <>
-        <Header backgroundColor="#f8e256" />
+      <Header backgroundColor="#f8e256" /> {/* Renders the header component with a specific background color */}
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/posts/:postId" element={<PostDetails postsData={postsData} />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage />} /> {/* Renders the HomePage component when the path is '/' */}
+        <Route path="/about" element={<AboutPage />} /> {/* Renders the AboutPage component when the path is '/about' */}
+        <Route path="/contact" element={<ContactPage />} /> {/* Renders the ContactPage component when the path is '/contact' */}
+        <Route path="/posts/:postId" element={<PostDetails postsData={postsData} />} /> {/* Renders the PostDetails component with the specified post data when the path matches '/posts/:postId' */}
+      </Routes>
 
-        <Footer />
-      </>
+      <Footer /> {/* Renders the footer component */}
     </Router>
   );
 };
