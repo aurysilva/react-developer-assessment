@@ -26,5 +26,23 @@
 	-webkit-border-radius:50px;
 	-moz-border-radius:50px;
 	-ms-border-radius:50px;
-	-o-border-radius:50px;
+	-o-border-radius:50px;  
+}
+
+@media (max-width: 1024px) {
+	.input {
+	  width: 70%;
+	}
+}
+
+@media (max-width: 768px) {
+	.input {
+	  width: 85%;
+	}
+}
+
+@media (max-width: 580px) {
+	.input {
+	  width: 98%;
+	}
 }

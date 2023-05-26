@@ -48,3 +48,9 @@
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 580px) {
+    .contactForm {
+        max-width: 80%;
+    }
+}

@@ -1,5 +1,16 @@
 footer {
     background-color: #eeeeee;
-    padding: 30px;
+    padding: 60px 0 30px;
     text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0  30px;
+    margin: 0 auto;
+}
+
+h5 {
+    margin: 10px 0;
 }

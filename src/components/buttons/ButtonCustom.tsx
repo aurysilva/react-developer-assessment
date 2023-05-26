@@ -1,6 +1,6 @@
 import React, { MouseEventHandler } from 'react';
 import { Link } from 'react-router-dom';
-import './ButtonCustomStyle.css';
+import styles from './ButtonCustomStyle.module.css';
 
 interface ButtonCustomProps {
   text: string;
@@ -13,7 +13,7 @@ const ButtonCustom: React.FC<ButtonCustomProps> = ({ text, onClick, customClass,
   // Render a button if no link is provided
   if (!link) {
     return (
-      <button onClick={onClick} className={customClass}>
+      <button onClick={onClick} className={`${styles.btn} ${customClass}`}>
         {text}
       </button>
     );
@@ -21,7 +21,7 @@ const ButtonCustom: React.FC<ButtonCustomProps> = ({ text, onClick, customClass,
 
   // Render a link with the provided URL
   return (
-    <Link to={link} className={customClass}>
+    <Link to={link} className={`${styles.btn} ${customClass}`}>
       {text}
     </Link>
   );
