@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ backgroundColor }) => {
     <header style={headerBGColor}>
       <div className={styles.containerFlex}>
         {/* Render the logo image */}
-        <Link to={'/'}>
+        <Link to={'/web-projects/react/the-post'}>
           <Image
             maxWidth='120px'
             alt="Post Logo"
@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ backgroundColor }) => {
         {/* Render the navigation bar */}
         <NavigationBar /> 
         {/* Render the "Get in touch" button */}
-        <ButtonCustom text="Get in touch" customClass={`${styles.bgDark}`} link="/contact" />
+        <ButtonCustom text="Get in touch" customClass={`${styles.bgDark}`} link="/web-projects/react/the-post/contact" />
         {/* 
           The above line uses the ButtonCustom component to render a button with the following properties:
           - Text: "Get in touch"

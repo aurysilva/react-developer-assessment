@@ -15,10 +15,10 @@ const App: FC = () => {
       <Header backgroundColor="#f8e256" /> {/* Renders the header component with a specific background color */}
 
       <Routes>
-        <Route path="/" element={<HomePage />} /> {/* Renders the HomePage component when the path is '/' */}
-        <Route path="/about" element={<AboutPage />} /> {/* Renders the AboutPage component when the path is '/about' */}
-        <Route path="/contact" element={<ContactPage />} /> {/* Renders the ContactPage component when the path is '/contact' */}
-        <Route path="/posts/:postId" element={<PostDetails postsData={postsData} />} /> {/* Renders the PostDetails component with the specified post data when the path matches '/posts/:postId' */}
+        <Route path="/web-projects/react/the-post/" element={<HomePage />} /> {/* Renders the HomePage component when the path is '/' */}
+        <Route path="/web-projects/react/the-post/about" element={<AboutPage />} /> {/* Renders the AboutPage component when the path is '/about' */}
+        <Route path="/web-projects/react/the-post/contact" element={<ContactPage />} /> {/* Renders the ContactPage component when the path is '/contact' */}
+        <Route path="/web-projects/react/the-post/posts/:postId" element={<PostDetails postsData={postsData} />} /> {/* Renders the PostDetails component with the specified post data when the path matches '/posts/:postId' */}
       </Routes>
 
       <Footer /> {/* Renders the footer component */}

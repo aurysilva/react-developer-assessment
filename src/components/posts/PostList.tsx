@@ -54,7 +54,7 @@ const PostList: React.FC<PostListProps> = ({ data }) => {
         {/* Render the filtered posts with transitions */}
         {filteredPosts.slice(0, visiblePosts).map((post, index) => (
           <CSSTransition key={post.id} timeout={500} classNames="post-item">
-            <Link to={`/posts/${post.id}`}>
+            <Link to={`/web-projects/react/the-post/posts/${post.id}`}>
               <PostListItem post={post} /> {/* Render the PostListItem component for each post */}
             </Link>
           </CSSTransition>

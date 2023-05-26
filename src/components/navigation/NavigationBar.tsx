@@ -17,9 +17,9 @@ const NavigationBar = () => {
         <div className={styles.toggleBar}></div>
       </div>
       <ul className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`}>
-        <NavItem to="/" text="Home" onClick={handleMenuToggle} /> {/* Navigation link to the home page */}
-        <NavItem to="/about" text="About" onClick={handleMenuToggle} /> {/* Navigation link to the about page */}
-        <NavItem to="/contact" text="Contact" onClick={handleMenuToggle} /> {/* Navigation link to the contact page */}
+        <NavItem to="/web-projects/react/the-post/" text="Home" onClick={handleMenuToggle} /> {/* Navigation link to the home page */}
+        <NavItem to="/web-projects/react/the-post/about" text="About" onClick={handleMenuToggle} /> {/* Navigation link to the about page */}
+        <NavItem to="/web-projects/react/the-post/contact" text="Contact" onClick={handleMenuToggle} /> {/* Navigation link to the contact page */}
       </ul>
     </nav>
   );

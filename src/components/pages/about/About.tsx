@@ -80,7 +80,7 @@ const AboutPage: React.FC = () => {
                 Donec laoreet lectus sit amet nunc volutpat, et commodo metus convallis. Fusce eget sem
                 vestibulum, interdum tortor sit amet, tincidunt ipsum.
             </p>
-            <Link to="/"> <strong>Go back to home</strong> </Link>
+            <Link to="/web-projects/react/the-post"> <strong>Go back to home</strong> </Link>
         </div> 
     </>
   );

@@ -36,7 +36,7 @@ const PostDetails: FC<PostDetailsProps> = ({ postsData }) => {
       <div className={styles.container}>
         <h2>Post not found</h2>
         <p>Unfortunately, there is nothing here</p>
-        <Link to="/">Go back to home</Link> {/* Link to navigate back to the home page */}
+        <Link to="/web-projects/react/the-post">Go back to home</Link> {/* Link to navigate back to the home page */}
       </div>
     );
   }
