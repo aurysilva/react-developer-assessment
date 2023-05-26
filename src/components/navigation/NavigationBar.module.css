@@ -32,11 +32,7 @@
     color: #009688;
 }
 
-
-
-
 @media (max-width: 768px) {
-	/* NavigationBar.module.css */
 
 .navBar {
     background-color: #f2f2f2;
@@ -89,7 +85,5 @@
     font-weight: bold;
     color: #333333;
   }
-  
-
-  
+    
 }
