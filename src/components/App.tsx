@@ -8,6 +8,7 @@ import '../global-style/GlobalStyle.module.css';
 import HomePage from './pages/homepage/HomePage';
 import AboutPage from './pages/about/About';
 import ContactPage from './pages/contact/Contact';
+import PageNotFound from './pages/pageNotFound/pageNotFound';
 
 const App: FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: FC = () => {
         <Route path="/web-projects/react/the-post/about" element={<AboutPage />} /> {/* Renders the AboutPage component when the path is '/about' */}
         <Route path="/web-projects/react/the-post/contact" element={<ContactPage />} /> {/* Renders the ContactPage component when the path is '/contact' */}
         <Route path="/web-projects/react/the-post/posts/:postId" element={<PostDetails postsData={postsData} />} /> {/* Renders the PostDetails component with the specified post data when the path matches '/posts/:postId' */}
+        <Route path="/*" element={<PageNotFound />} /> {/* Renders the PageNotFound component for all other routes */}
       </Routes>
 
       <Footer /> {/* Renders the footer component */}

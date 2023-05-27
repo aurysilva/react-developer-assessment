@@ -1,0 +1,11 @@
+.containerFlex {
+    width: 100%;
+    max-width: 1400px;
+    padding: 150px 30px 150px;  
+    margin: 0 auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
