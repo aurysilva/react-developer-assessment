@@ -5,7 +5,7 @@ import styles from './PostListStyle.module.css';
 import PostListItem from './PostListItem';
 import ButtonCustom from '../buttons/ButtonCustom';
 import SearchComponent from '../search/Search';
-import CategorySelect from '../categorySelect/CategorySelect';
+import CategorySelect from '../categoryFilter/CategorySelect';
 
 interface PostsData {
   posts: Post[]; // Interface defining the structure of the posts data
