@@ -53,6 +53,7 @@
 
 .middleBorder {
   width: 1px;
+  min-height: 1px;
   background-color: #bbbbbb;
 }
 
@@ -60,11 +61,6 @@
   padding: 30px 0 70px;
   text-align: center;
 }
-
-/* .categoryWrapper {
-  width: auto;
-  display: flex;
-} */
 
 .bgYellow {
   background-color: #f8e256;
@@ -91,4 +87,19 @@
 .post-item-exit-active {
   opacity: 0;
   transition: opacity 500ms;
+}
+
+@media (max-width: 580px) {
+	.wrapperFlex {
+    flex-direction: column;
+    width: 90%;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+  .middleBorder {
+    width: 100%;
+  }
 }
